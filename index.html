@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Movie Generator</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 4px;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+    
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>Random Movie Generator</h1>
+    <p>Click the button to generate a random movie:</p>
+    <button onclick="generateMovie()">Generate Movie</button>
+    <p id="movie-title"></p>
+  </div>
+  
+  <script>
+    const movies = [
+      "The Godfather",
+      "The Shawshank Redemption",
+      "The Dark Knight",
+      "Pulp Fiction",
+      "The Lord of the Rings: The Return of the King",
+      "Forrest Gump",
+      "Star Wars: Episode V - The Empire Strikes Back",
+      "Inception",
+      "The Matrix",
+      "Goodfellas",
+      "The Silence of the Lambs",
+      "Saving Private Ryan",
+      "Interstellar",
+      "The Green Mile",
+      "Gladiator",
+      "The Prestige",
+      "Fight Club",
+      "Schindler's List",
+      "The Lion King",
+      "Back to the Future",
+      "Jurassic Park",
+      "Indiana Jones and the Raiders of the Lost Ark",
+      "The Terminator",
+      "Aliens",
+      "Blade Runner"
+    ];
+    
+    function generateMovie() {
+      const movieTitle = document.getElementById("movie-title");
+      const randomIndex = Math.floor(Math.random() * movies.length);
+      movieTitle.textContent = movies[randomIndex];
+    }
+  </script>
+</body>
+</html>
